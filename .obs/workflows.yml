@@ -2,7 +2,7 @@ test_build:
   steps:
     - link_package:
         source_project: deepin:Develop:main
-        source_package: %{SCM_REPOSITORY_NAME} 
+        source_package: template-repository
         target_project: deepin:CI
 
     - configure_repositories:
@@ -23,7 +23,7 @@ tag_build:
   steps:
     - branch_package:
         source_project: deepin:Develop:main
-        source_package: %{SCM_REPOSITORY_NAME} 
+        source_package: template-repository
         target_project: deepin:Unstable:main
   filters:
     event: tag_push
@@ -32,6 +32,6 @@ commit_build:
   steps:
     - trigger_services:
         project: deepin:Develop:main
-        package: %{SCM_REPOSITORY_NAME}
+        package: template-repository
   filters:
     event: push
