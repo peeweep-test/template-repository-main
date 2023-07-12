@@ -5,5 +5,5 @@ on:
 
 jobs:
   chatopt:
-    uses: peeweep-test/.github/.github/workflows/chatOps.yml@master
+    uses: peeweep-test/.github/.github/workflows/chatOps.yml@main
     secrets: inherit
